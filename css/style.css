@@ -1,0 +1,230 @@
+/*********************** font families ***********/
+/*********************** weights ****************/
+/********************** sizes **************/
+.container {
+  min-width: 375px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+/*********************** font families ***********/
+/*********************** weights ****************/
+/********************** sizes **************/
+/******************** global styles *****************/
+header .logo_subtitle {
+  margin-bottom: 30px;
+}
+header form {
+  width: 96%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  border: 1px solid white;
+  background: white;
+}
+header form input {
+  padding: 10px 0 10px 15px;
+  border: none;
+  width: 80%;
+  outline-width: 0;
+}
+header form input::placeholder {
+  color: grey;
+  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0.2em;
+}
+header form button {
+  height: 52px;
+  border: none;
+  margin: 4px 5px 4px 0;
+  position: relative;
+  width: 135px;
+  font-family: "Aleo", serif;
+  background: #5373FD;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+header form button:after {
+  content: url("../../images/search.svg");
+  position: absolute;
+  left: 6%;
+}
+@media screen and (min-width: 700px) {
+  header form {
+    width: 650px;
+  }
+}
+@media screen and (min-width: 509px) {
+  header .for_xs {
+    display: none;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 508px) {
+  header form > button {
+    display: none;
+  }
+  header form > input {
+    width: 100%;
+  }
+  header .for_xs {
+    position: relative;
+    width: 130px;
+    height: 42px;
+    background: #5373FD;
+    font-family: "Aleo", serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: 30px;
+  }
+  header .for_xs::after {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 6%;
+    content: url("../../images/search.svg");
+  }
+}
+
+/************************* global ***************/
+header {
+  box-sizing: border-box;
+  background-position-x: center;
+  background-size: cover;
+  background-image: url("../../images/HeaderBackground.jpg");
+  background-repeat: no-repeat;
+  height: 77vh;
+}
+header .logo {
+  padding-top: 27vh;
+}
+
+.logo {
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.logo_subtitle {
+  font-size: 22px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 28px;
+  letter-spacing: 0.31em;
+}
+
+/**************** 1920 + *************/
+@media screen and (min-width: 1920px) {
+  form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-between;
+  }
+  .logo_subtitle {
+    margin-bottom: 48px;
+  }
+}
+.logo-title {
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+/*************** breakpoints*************/
+/*********************** font families ***********/
+/*********************** weights ****************/
+/********************** sizes **************/
+.container {
+  min-width: 375px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  background: #5373FD;
+}
+.main-header ul {
+  display: flex;
+}
+.main-header .logo-title__main {
+  font-size: 24px;
+}
+.main-header span {
+  padding-top: 3px;
+}
+.main-header svg {
+  padding-top: 2px;
+}
+.main-header a {
+  text-transform: uppercase;
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+.main-header ul {
+  gap: 25px;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .main-header {
+    padding: 0 34px;
+  }
+  .main-header nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-header svg {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  .main-header {
+    padding: 0 34px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

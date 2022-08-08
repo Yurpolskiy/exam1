@@ -1,0 +1,58 @@
+@use '../vars/mixins';
+@use '../vars/colors';
+@use '../vars/fonts';
+@use '../vars/displays';
+@import '../details/container';
+@import '../details/buttons';
+
+/************************* global ***************/
+header {
+  box-sizing: border-box;
+  background-position-x: center;
+  background-size: cover;
+  background-image: url("../../images/HeaderBackground.jpg");
+  background-repeat: no-repeat;
+  height: 77vh;
+  .logo {
+    padding-top: 27vh;
+  }
+}
+.logo {
+  text-align: center;
+}
+
+h1 {
+  font-size: fonts.$logo-title_size;
+}
+
+.logo_subtitle {
+  font-size: fonts.$logo-subtitle_size;
+  font-weight: fonts.$paragraph-weight;
+  color: colors.$default-white;
+  line-height: 28px;
+  letter-spacing: 0.31em;
+}
+
+/**************** 1920 + *************/
+@include mixins.media (displays.$largest) {
+  form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-between;
+  }
+  .logo_subtitle {
+    margin-bottom: 48px;
+  }
+}
+
+.logo-title {
+  font-weight: fonts.$logo-weight;
+  font-family: fonts.$primary-family;
+  text-transform: uppercase;
+  color: colors.$default-white;
+}
+
+
+/*************** breakpoints*************/

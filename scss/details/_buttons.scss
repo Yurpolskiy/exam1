@@ -1,0 +1,91 @@
+@use '../vars/mixins';
+@use '../vars/colors';
+@use '../vars/fonts';
+@use '../vars/displays';
+
+
+
+
+/******************** global styles *****************/
+header {
+  .logo_subtitle {
+    margin-bottom: 30px;
+  }
+  form {
+    width: 96%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    border: 1px solid white;
+    background: white;
+    input {
+      padding: 10px 0 10px 15px;
+      border: none;
+      width: 80%;
+      outline-width: 0;
+    }
+    input::placeholder {
+      color: grey;
+      font-size: fonts.$navbar_hrefs-size;
+      font-family: fonts.$primary-family;
+      letter-spacing: 0.2em;
+    }
+    button {
+      height: 52px;
+      border: none;
+      margin: 4px 5px 4px 0;
+      position: relative;
+      width: 135px;
+      font-family: fonts.$secondary-family;
+      background: colors.$button-background;
+      font-size: fonts.$navbar_hrefs-size;
+      font-weight: fonts.$paragraph-weight;
+      letter-spacing: 0.1em;
+      color: colors.$default-white;
+    }
+    button:after {
+      content: url("../../images/search.svg");
+      position: absolute;
+      left: 6%;
+    }
+  }
+  @include mixins.media(700px) {
+    form {
+      width: 650px;
+    }
+  }
+  @include mixins.media(509px) {
+    .for_xs {
+      display: none;
+    }
+  }
+  @include mixins.media_accurate(displays.$xs, 508px) {
+    form > button {
+      display: none;
+    }
+    form > input {
+      width: 100%;
+    }
+    .for_xs {
+      position: relative;
+      width: 130px;
+      height: 42px;
+      background: colors.$button-background;
+      font-family: fonts.$secondary-family;
+      font-size: fonts.$navbar_hrefs-size + 1px;
+      font-weight: fonts.$paragraph-weight;
+      letter-spacing: 0.1em;
+      color: colors.$default-white;
+      margin-top: 30px;
+      }
+    .for_xs::after {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      left: 6%;
+      content: url("../../images/search.svg");
+    }
+    }
+  }

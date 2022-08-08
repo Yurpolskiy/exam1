@@ -1,0 +1,11 @@
+@mixin media ($breakpoint) {
+  @media  screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin media_accurate ($breakpoint, $endpoint) {
+  @media screen and (min-width: $breakpoint) and (max-width: $endpoint) {
+    @content;
+  }
+}

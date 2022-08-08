@@ -1,0 +1,16 @@
+@use '../vars/mixins';
+@use '../vars/displays';
+.container {
+  min-width: 375px;
+  max-width: 1320px;
+  margin: 0 auto;
+  @include mixins.media(displays.$largest) {
+    padding: 0 300px;
+    margin: 0 auto;
+  }
+  @include mixins.media_accurate(displays.$xs, displays.$sm - 1px) {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
