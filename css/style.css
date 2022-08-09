@@ -19,6 +19,11 @@
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .container {
+    padding: 0 134px;
+  }
+}
 
 /*********************** font families ***********/
 /*********************** weights ****************/
@@ -176,6 +181,11 @@ h1 {
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .container {
+    padding: 0 134px;
+  }
+}
 
 .main-header {
   display: flex;
@@ -208,7 +218,7 @@ h1 {
 .main-header ul {
   gap: 25px;
 }
-@media screen and (min-width: 375px) and (max-width: 767px) {
+@media screen and (min-width: 375px) and (max-width: 1023px) {
   .main-header {
     padding: 0 34px;
   }
@@ -216,14 +226,32 @@ h1 {
     display: none;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .main-header {
+    padding: 0 50px;
+  }
+}
+@media screen and (min-width: 1024px) {
   .main-header svg {
     display: none;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1919px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .main-header {
     padding: 0 34px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .main-header {
+    padding: 0 300px;
+  }
+  .main-header ul {
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .main-header {
+    padding: 0 134px;
   }
 }
 

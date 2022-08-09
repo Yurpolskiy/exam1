@@ -34,18 +34,30 @@
   ul {
     gap: 25px;
   }
-  @include mixins.media_accurate(displays.$xs, displays.$sm - 1px) {
+  @include mixins.media_accurate(displays.$xs, displays.$lt - 1px) {
     padding: 0 34px;
     nav {
       display: none;
     }
   }
-  @include mixins.media(displays.$sm) {
+  @include mixins.media_accurate(displays.$lt, displays.$xl) {
+    padding: 0 50px;
+  }
+  @include mixins.media(displays.$lt) {
     svg {
       display: none;
     }
   }
-  @include mixins.media_accurate(displays.$sm, displays.$largest - 1px){
+  @include mixins.media_accurate(displays.$sm, displays.$lt - 1px){
     padding: 0 34px;
+  }
+  @include mixins.media(displays.$largest) {
+    padding: 0 300px;
+    ul {
+      gap: 40px;
+    }
+  }
+  @include mixins.media_accurate(displays.$xl, displays.$largest - 1px) {
+    padding: 0 134px;
   }
 }
