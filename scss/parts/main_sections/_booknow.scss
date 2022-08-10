@@ -1,0 +1,17 @@
+@use '../../vars/mixins';
+@use '../../vars/colors';
+@use '../../vars/fonts';
+@use '../../vars/displays';
+@import '../../details/container';
+
+/***************** global styles ******************/
+.book-now {
+  background-image: url("../../../images/mansion.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  height: 67.5vh;
+}
+
+
+/****************** for 1920 px ***************/

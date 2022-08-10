@@ -12,16 +12,18 @@ header {
   background-size: cover;
   background-image: url("../../images/HeaderBackground.jpg");
   background-repeat: no-repeat;
-  height: 77vh;
+  height: 98vh;
   .logo {
-    padding-top: 27vh;
+    padding-top: 33.5vh;
   }
 }
 .logo {
+  margin-left: 10px;
   text-align: center;
 }
 
 h1 {
+  margin-bottom: 5px;
   font-size: fonts.$logo-title_size;
 }
 
@@ -30,7 +32,7 @@ h1 {
   font-weight: fonts.$paragraph-weight;
   color: colors.$default-white;
   line-height: 28px;
-  letter-spacing: 0.31em;
+  letter-spacing: 0.35em;
 }
 
 /**************** 1920 + *************/
@@ -43,7 +45,7 @@ h1 {
     justify-content: space-between;
   }
   .logo_subtitle {
-    margin-bottom: 48px;
+    margin-bottom: 78px;
   }
 }
 

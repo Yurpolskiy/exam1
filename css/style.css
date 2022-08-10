@@ -19,6 +19,11 @@
     margin: 0 auto;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 34px;
+  }
+}
 @media screen and (min-width: 1024px) and (max-width: 1919px) {
   .container {
     padding: 0 134px;
@@ -30,7 +35,7 @@
 /********************** sizes **************/
 /******************** global styles *****************/
 header .logo_subtitle {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 header form {
   width: 96%;
@@ -68,7 +73,7 @@ header form button {
   color: #FFFFFF;
 }
 header form button:after {
-  content: url("../../images/search.svg");
+  content: url("../images/search.svg");
   position: absolute;
   left: 6%;
 }
@@ -106,7 +111,7 @@ header form button:after {
     height: 10px;
     position: absolute;
     left: 6%;
-    content: url("../../images/search.svg");
+    content: url("../images/search.svg");
   }
 }
 
@@ -115,19 +120,21 @@ header {
   box-sizing: border-box;
   background-position-x: center;
   background-size: cover;
-  background-image: url("../../images/HeaderBackground.jpg");
+  background-image: url("../images/HeaderBackground.jpg");
   background-repeat: no-repeat;
-  height: 77vh;
+  height: 98vh;
 }
 header .logo {
-  padding-top: 27vh;
+  padding-top: 33.5vh;
 }
 
 .logo {
+  margin-left: 10px;
   text-align: center;
 }
 
 h1 {
+  margin-bottom: 5px;
   font-size: 48px;
 }
 
@@ -136,7 +143,7 @@ h1 {
   font-weight: 400;
   color: #FFFFFF;
   line-height: 28px;
-  letter-spacing: 0.31em;
+  letter-spacing: 0.35em;
 }
 
 /**************** 1920 + *************/
@@ -149,7 +156,7 @@ h1 {
     justify-content: space-between;
   }
   .logo_subtitle {
-    margin-bottom: 48px;
+    margin-bottom: 78px;
   }
 }
 .logo-title {
@@ -179,6 +186,11 @@ h1 {
     box-sizing: border-box;
     padding: 0 15px;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 34px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1919px) {
@@ -254,5 +266,402 @@ h1 {
     padding: 0 134px;
   }
 }
+
+/*********************** font families ***********/
+/*********************** weights ****************/
+/********************** sizes **************/
+.container {
+  min-width: 375px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .container {
+    padding: 0 134px;
+  }
+}
+
+.why {
+  height: 71vh;
+  padding-top: 132px;
+  background-image: url("../images/WhyBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*********************** styles for phones *****************/
+  /************************ styles for tablet ****************/
+  /***************** styles for laptop ******************/
+  /*************************** for laptop -l *****************/
+  /********************** for 1440px ****************/
+  /******************************** for 1920 + px *****************/
+}
+.why img {
+  width: 350px;
+  height: 220px;
+}
+.why h2 {
+  font-size: 36px;
+  font-weight: 400;
+  font-family: "Aleo", serif;
+  color: #FFFFFF;
+  text-transform: capitalize;
+}
+.why p {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+.why button {
+  background-color: #5373FD;
+  color: #FFFFFF;
+  border: none;
+  font-family: "Aleo", serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 20px;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .why {
+    height: 76vh;
+  }
+  .why .flex-container {
+    padding-top: 70px;
+  }
+  .why .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .why h2 {
+    margin-bottom: 40px;
+  }
+  .why p {
+    text-align: center;
+    width: 250px;
+  }
+  .why p:first-child {
+    margin-bottom: 15px;
+  }
+  .why img {
+    display: none;
+  }
+  .why button {
+    margin-top: 25px;
+    width: 150px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .why {
+    height: 70vh;
+    text-align: center;
+  }
+  .why h2 {
+    margin-bottom: 25px;
+  }
+  .why p {
+    width: 550px;
+    margin: 0 auto;
+  }
+  .why p:first-child {
+    margin-bottom: 15px;
+  }
+  .why img {
+    width: 280px;
+    height: 180px;
+    margin-top: 35px;
+  }
+  .why img:first-child {
+    margin-right: 30px;
+  }
+  .why button {
+    margin-top: 25px;
+    height: 45px;
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .why {
+    text-align: center;
+  }
+  .why h2 {
+    margin-bottom: 40px;
+  }
+  .why .paragraphs {
+    margin-bottom: 15px;
+  }
+  .why p {
+    margin: 0 auto;
+    width: 650px;
+  }
+  .why p:first-child {
+    margin-bottom: 20px;
+  }
+  .why img {
+    width: 315px;
+    height: 180px;
+  }
+  .why img:first-child {
+    margin-right: 40px;
+  }
+  .why button {
+    margin-bottom: 20px;
+    height: 45px;
+    font-size: 13px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .why .flex-container {
+    display: flex;
+  }
+  .why .content {
+    margin-top: 50px;
+  }
+  .why h2 {
+    margin-bottom: 24px;
+  }
+  .why p {
+    margin-right: 85px;
+    width: 650px;
+  }
+  .why p:first-child {
+    margin-bottom: 15px;
+  }
+  .why .img-second {
+    margin-top: 15px;
+    margin-left: 35px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .why {
+    height: 68vh;
+  }
+  .why button {
+    height: 50px;
+    width: 150px;
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .why {
+    height: 71vh;
+  }
+  .why .flex-container {
+    display: flex;
+  }
+  .why p {
+    width: 650px;
+  }
+  .why p:first-child {
+    padding-top: 30px;
+    margin-bottom: 27px;
+  }
+  .why .content {
+    padding-top: 60px;
+    margin-right: 133px;
+  }
+  .why .img-second {
+    margin-top: 13px;
+    margin-left: 75px;
+  }
+  .why button {
+    width: 213px;
+    height: 60px;
+    margin-top: 30px;
+  }
+}
+
+/*********************** font families ***********/
+/*********************** weights ****************/
+/********************** sizes **************/
+.container {
+  min-width: 375px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .container {
+    padding: 0 134px;
+  }
+}
+
+/********************** global styles **********************/
+.steps {
+  background: #333333;
+  /************************* for smartphones ***************/
+  /************************   for tablet    ******************/
+  /************************ for 1440 + px ****************/
+  /*********************** for 1920px *******************/
+}
+.steps p {
+  font-family: "Aleo", serif;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .steps {
+    padding: 50px 0;
+    text-align: center;
+  }
+  .steps svg {
+    margin-bottom: 20px;
+  }
+  .steps p {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .steps {
+    text-align: center;
+  }
+  .steps .flex-container {
+    display: flex;
+    padding: 0 34px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .steps p {
+    margin: 20px 40px;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .steps {
+    /******* for first 300  px XDDDDDDDDDDDDD xz kak make this better =( *************/
+    background-image: url("../images/Line.svg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: 52%;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) and (min-width: 1440px) and (max-width: 1720px) {
+  .steps {
+    background-size: 45%;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .steps .flex-container {
+    padding: 60px 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  .steps svg {
+    background-color: #333333;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .steps {
+    background-position-x: 50%;
+    padding: 57px 0;
+    background-image: url("../images/Line.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    text-align: center;
+  }
+  .steps .flex-container {
+    padding: 10px 337px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .steps svg {
+    background-color: #333333;
+    margin-bottom: 20px;
+  }
+  .steps p {
+    width: 341px;
+  }
+}
+
+/*********************** font families ***********/
+/*********************** weights ****************/
+/********************** sizes **************/
+.container {
+  min-width: 375px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .container {
+    padding: 0 134px;
+  }
+}
+
+/***************** global styles ******************/
+.book-now {
+  background-image: url("../images/mansion.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  height: 67.5vh;
+}
+
+/****************** for 1920 px ***************/
 
 /*# sourceMappingURL=style.css.map */

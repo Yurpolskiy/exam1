@@ -1,0 +1,88 @@
+@use '../../vars/mixins';
+@use '../../vars/colors';
+@use '../../vars/fonts';
+@use '../../vars/displays';
+@import '../../details/container';
+
+/********************** global styles **********************/
+.steps {
+  background: colors.$default-black;
+  p {
+    font-family: fonts.$secondary-family;
+    font-size: fonts.$h2-size;
+    font-weight: fonts.$paragraph-weight;
+    text-transform: capitalize;
+    line-height: 40px;
+    color: colors.$default-white;
+  }
+
+  /************************* for smartphones ***************/
+  @include mixins.media_accurate(displays.$xs, displays.$sm - 1px) {
+    padding: 50px 0;
+    text-align: center;
+    svg {
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: fonts.$h2-size - 8px;
+      margin-bottom: 30px;
+    }
+  }
+  /************************   for tablet    ******************/
+  @include mixins.media_accurate(displays.$sm, displays.$xl - 1px) {
+    text-align: center;
+    .flex-container {
+      display: flex;
+      padding: 0 34px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    p {
+      margin: 20px 40px;
+    }
+  }
+  /************************ for 1440 + px ****************/
+  @include mixins.media_accurate(displays.$xl, displays.$largest - 1px) {
+    /******* for first 300  px XDDDDDDDDDDDDD xz kak make this better =( *************/
+    @include mixins.media_accurate(1440px, 1720px) {
+      background-size: 45%;
+    }
+    background-image: url("../../../images/Line.svg");
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-size: 52%;
+    text-align: center;
+    .flex-container {
+      padding: 60px 300px;
+      display: flex;
+      justify-content: space-between;
+    }
+    svg {
+      background-color: colors.$default-black;
+      margin-bottom: 20px;
+    }
+  }
+
+  /*********************** for 1920px *******************/
+  @include mixins.media(displays.$largest) {
+    background-position-x: 50%;
+    padding: 57px 0;
+    background-image: url("../../../images/Line.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    text-align: center;
+    .flex-container {
+      padding: 10px 337px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    svg {
+      background-color: colors.$default-black;
+      margin-bottom: 20px;
+    }
+    p {
+      width: 341px;
+    }
+  }
+}

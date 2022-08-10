@@ -3,3 +3,191 @@
 @use '../../vars/fonts';
 @use '../../vars/displays';
 @import '../../details/container';
+
+.why {
+  height: 71vh;
+  padding-top: 132px;
+  background-image: url("../../../images/WhyBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  img {
+    width: 350px;
+    height: 220px;
+  }
+
+  h2 {
+    font-size: fonts.$h2-size;
+    font-weight: fonts.$paragraph-weight;
+    font-family: fonts.$secondary-family;
+    color: colors.$default-white;
+    text-transform: capitalize;
+  }
+
+    p {
+      font-family: fonts.$primary-family;
+      font-weight: fonts.$paragraph-weight_secondary;
+      font-size: fonts.$paragraph-size;
+      letter-spacing: 0.1em;
+      line-height: 28px;
+      color: colors.$default-white;
+  }
+  button {
+    background-color: colors.$button-background;
+    color: colors.$default-white;
+    border: none;
+    font-family: fonts.$secondary-family;
+    font-size: fonts.$paragraph-size;
+    font-weight: fonts.$paragraph-weight;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    line-height: 20px;
+  }
+  /*********************** styles for phones *****************/
+  @include mixins.media_accurate(displays.$xs, displays.$sm - 1px) {
+    height: 76vh;
+    .flex-container {
+      padding-top: 70px;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h2 {
+      margin-bottom: 40px;
+    }
+    p {
+      text-align: center;
+      width: 250px;
+    }
+    p:first-child {
+      margin-bottom: 15px;
+    }
+    img {
+      display: none;
+    }
+    button {
+      margin-top: 25px;
+      width: 150px;
+      height: 50px;
+    }
+  }
+  /************************ styles for tablet ****************/
+  @include mixins.media_accurate(displays.$sm, displays.$lt - 1px) {
+    height: 70vh;
+    text-align: center;
+    h2 {
+      margin-bottom: 25px;
+    }
+    p {
+      width: 550px;
+      margin: 0 auto;
+    }
+    p:first-child {
+      margin-bottom: 15px;
+    }
+    img {
+      width: 280px;
+      height: 180px;
+      margin-top: 35px;
+    }
+    img:first-child {
+      margin-right: 30px;
+    }
+    button {
+      margin-top: 25px;
+      height: 45px;
+      font-size: fonts.$paragraph-size - 1px;
+    }
+  }
+  /***************** styles for laptop ******************/
+  @include mixins.media_accurate(displays.$lt, displays.$xl - 1px) {
+    text-align: center;
+    h2 {
+      margin-bottom: 40px;
+    }
+    .paragraphs {
+      margin-bottom: 15px;
+    }
+    p {
+      margin: 0 auto;
+      width: 650px;
+    }
+    p:first-child {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 315px;
+      height: 180px;
+    }
+    img:first-child {
+      margin-right: 40px;
+    }
+    button {
+      margin-bottom: 20px;
+      height: 45px;
+      font-size: fonts.$paragraph-size - 3px;
+    }
+  }
+  /*************************** for laptop -l *****************/
+  @include mixins.media_accurate(displays.$xl, displays.$largest - 1px) {
+    .flex-container {
+      display: flex;
+    }
+    .content {
+      margin-top: 50px;
+    }
+    h2 {
+      margin-bottom: 24px;
+    }
+    p {
+      margin-right: 85px;
+      width: 650px;
+    }
+    p:first-child {
+      margin-bottom: 15px;
+    }
+    .img-second {
+      margin-top: 15px;
+      margin-left: 35px;
+    }
+  }
+  /********************** for 1440px ****************/
+  @include mixins.media_accurate(displays.$xl, displays.$largest - 1px) {
+    height: 68vh;
+    button{
+      height: 50px;
+      width: 150px;
+      margin-top: 50px;
+    }
+  }
+  /******************************** for 1920 + px *****************/
+  @include mixins.media(displays.$largest) {
+    height: 71vh;
+    .flex-container {
+      display: flex;
+    }
+    p {
+      width: 650px;
+    }
+    p:first-child {
+      padding-top: 30px;
+      margin-bottom: 27px;
+    }
+    .content {
+      padding-top: 60px;
+      margin-right: 133px;
+    }
+    .img-second {
+      margin-top: 13px;
+      margin-left: 75px;
+    }
+    button {
+      width: 213px;
+      height: 60px;
+      margin-top: 30px;
+    }
+  }
+}

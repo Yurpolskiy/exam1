@@ -13,6 +13,9 @@
     padding: 0 15px;
     margin: 0 auto;
   }
+  @include mixins.media_accurate(displays.$sm, displays.$lt - 1px) {
+    padding: 0 34px;
+  }
   @include mixins.media_accurate(displays.$lt, displays.$largest - 1px) {
     padding: 0 134px;
   }
