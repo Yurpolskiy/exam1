@@ -29,16 +29,34 @@
     }
   }
   /************************   for tablet    ******************/
-  @include mixins.media_accurate(displays.$sm, displays.$xl - 1px) {
+  @include mixins.media_accurate(displays.$sm, displays.$lt - 1px) {
     text-align: center;
     .flex-container {
       display: flex;
-      padding: 0 34px;
+      padding: 40px 34px;
       justify-content: center;
       flex-wrap: wrap;
     }
     p {
       margin: 20px 40px;
+    }
+  }
+  /************************ for tablet    *****************/
+  @include mixins.media_accurate(displays.$lt, displays.$xl - 1px) {
+    padding: 60px 0;
+    background-image: url("../../../images/Line.svg");
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-size: 57%;
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 134px;
+      text-align: center;
+    }
+    svg {
+      margin-bottom: 20px;
+      background: colors.$default-black;
     }
   }
   /************************ for 1440 + px ****************/
