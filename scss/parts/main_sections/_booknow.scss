@@ -10,8 +10,109 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  height: 67.5vh;
+  height: 72.5vh;
+  position: relative;
+
+  span {
+    font-size: fonts.$content-title;
+    font-weight: fonts.$paragraph-weight_secondary;
+    letter-spacing: 0.1em;
+    line-height: 28px;
+    font-family: fonts.$primary-family;
+    display: inline-block;
+    color: colors.$default-white;
+  }
+
+  h3 {
+    font-size: fonts.$content-title;
+    font-weight: fonts.$paragraph-weight;
+    line-height: 28px;
+    font-family: fonts.$primary-family;
+    text-transform: uppercase;
+    color: colors.$default-white;
+    padding: 16px 0;
+  }
+
+  p {
+    font-size: fonts.$paragraph-size;
+    font-weight: fonts.$paragraph-weight;
+    line-height: 28px;
+    font-family: fonts.$primary-family;
+    letter-spacing: 0.1em;
+    color: colors.$default-white;
+  }
+
+  .content {
+    top: 23vh;
+    position: absolute;
+    background: colors.$content-background;
+  }
+
+  .booknow {
+    background: colors.$button-background;
+    font-family: fonts.$secondary-family;
+    font-size: fonts.$paragraph-size;
+    font-weight: fonts.$paragraph-weight;
+    text-align: center;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: colors.$default-white;
+    border: none;
+  }
+  /********************* for phones ****************/
+  @include mixins.media_accurate(displays.$xs, displays.$sm - 1px) {
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    .content {
+      top: 18vh;
+      width: 250px;
+      margin: 0 auto;
+      padding: 15px 25px;
+    }
+    .booknow {
+      margin-top: 15px;
+      height: 40px;
+      width: 100%;
+    }
+  }
+  /******************** for tablet *****************/
+  @include mixins.media_accurate(displays.$sm, displays.$lt - 1px) {
+    background-position: center;
+    .content {
+      width: 500px;
+      padding: 20px 15px;
+    }
+    .booknow {
+      margin-top: 15px;
+      height: 40px;
+      width: 150px;
+    }
+  }
+  /******************* for laptop & 1440 + px *****************/
+  @include mixins.media_accurate(displays.$lt, displays.$largest - 1px) {
+    .content {
+      padding: 30px 25px;
+      width: 650px;
+    }
+    .booknow {
+      margin-top: 20px;
+      height: 50px;
+      width: 195px;
+    }
+  }
+  /****************** for 1920 px ***************/
+  @include mixins.media(displays.$largest) {
+    .content {
+      box-sizing: border-box;
+      padding: 44px 32px;
+      width: 650px;
+      background: colors.$content-background;
+    }
+    button {
+      height: 60px;
+      width: 213px;
+      margin-top: 24px;
+    }
+  }
 }
-
-
-/****************** for 1920 px ***************/

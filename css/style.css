@@ -122,10 +122,10 @@ header {
   background-size: cover;
   background-image: url("../images/HeaderBackground.jpg");
   background-repeat: no-repeat;
-  height: 98vh;
+  height: 92.5vh;
 }
 header .logo {
-  padding-top: 33.5vh;
+  padding-top: 31vh;
 }
 
 .logo {
@@ -467,7 +467,7 @@ h1 {
 }
 @media screen and (min-width: 1920px) {
   .why {
-    height: 71vh;
+    height: 67vh;
   }
   .why .flex-container {
     display: flex;
@@ -679,9 +679,110 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
-  height: 67.5vh;
+  height: 72.5vh;
+  position: relative;
+  /********************* for phones ****************/
+  /******************** for tablet *****************/
+  /******************* for laptop & 1440 + px *****************/
+  /****************** for 1920 px ***************/
 }
-
-/****************** for 1920 px ***************/
+.book-now span {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 28px;
+  font-family: "Josefin Sans", sans-serif;
+  display: inline-block;
+  color: #FFFFFF;
+}
+.book-now h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 16px 0;
+}
+.book-now p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+.book-now .content {
+  top: 23vh;
+  position: absolute;
+  background: #232323;
+}
+.book-now .booknow {
+  background: #5373FD;
+  font-family: "Aleo", serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: none;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .book-now {
+    background-position: center;
+    display: flex;
+    justify-content: center;
+  }
+  .book-now .content {
+    top: 18vh;
+    width: 250px;
+    margin: 0 auto;
+    padding: 15px 25px;
+  }
+  .book-now .booknow {
+    margin-top: 15px;
+    height: 40px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .book-now {
+    background-position: center;
+  }
+  .book-now .content {
+    width: 500px;
+    padding: 20px 15px;
+  }
+  .book-now .booknow {
+    margin-top: 15px;
+    height: 40px;
+    width: 150px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .book-now .content {
+    padding: 30px 25px;
+    width: 650px;
+  }
+  .book-now .booknow {
+    margin-top: 20px;
+    height: 50px;
+    width: 195px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .book-now .content {
+    box-sizing: border-box;
+    padding: 44px 32px;
+    width: 650px;
+    background: #232323;
+  }
+  .book-now button {
+    height: 60px;
+    width: 213px;
+    margin-top: 24px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

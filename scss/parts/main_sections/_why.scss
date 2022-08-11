@@ -165,7 +165,7 @@
   }
   /******************************** for 1920 + px *****************/
   @include mixins.media(displays.$largest) {
-    height: 71vh;
+    height: 67vh;
     .flex-container {
       display: flex;
     }
