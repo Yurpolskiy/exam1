@@ -1,0 +1,28 @@
+@use '../vars/mixins';
+@use '../vars/colors';
+@use '../vars/fonts';
+@use '../vars/displays';
+@import '../details/container';
+
+footer {
+  background: colors.$clear-black;
+  padding: 85px 0 80px 0;
+  text-align: center;
+  .logo-title {
+    letter-spacing: 0.1em;
+    font-size: fonts.$navbar-logo_size;
+  }
+  .logo_subtitle {
+    font-size: fonts.$logo-subtitle_size - 8px;
+    margin-bottom: 22px;
+  }
+  .socials{
+    display: flex;
+    width: 275px;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  @include mixins.media_accurate(displays.$xs, displays.$lt - 1px) {
+    padding: 60px 0;
+  }
+}

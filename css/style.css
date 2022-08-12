@@ -74,7 +74,7 @@ header form button {
   color: #FFFFFF;
 }
 header form button:after {
-  content: url("../../images/search.svg");
+  content: url("../images/search.svg");
   position: absolute;
   left: 6%;
 }
@@ -112,16 +112,31 @@ header form button:after {
     height: 10px;
     position: absolute;
     left: 6%;
-    content: url("../../images/search.svg");
+    content: url("../images/search.svg");
   }
 }
 
 /************************* global ***************/
+.logo-title {
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.logo_subtitle {
+  font-size: 22px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 28px;
+  letter-spacing: 0.35em;
+}
+
 header {
   box-sizing: border-box;
   background-position-x: center;
   background-size: cover;
-  background-image: url("../../images/HeaderBackground.jpg");
+  background-image: url("../images/HeaderBackground.jpg");
   background-repeat: no-repeat;
   height: 92.5vh;
   /**************** 1920 + *************/
@@ -135,13 +150,6 @@ header h1 {
   margin-bottom: 5px;
   font-size: 48px;
 }
-header .logo_subtitle {
-  font-size: 22px;
-  font-weight: 400;
-  color: #FFFFFF;
-  line-height: 28px;
-  letter-spacing: 0.35em;
-}
 @media screen and (min-width: 1920px) {
   header form {
     margin: 0 auto;
@@ -153,12 +161,6 @@ header .logo_subtitle {
   header .logo_subtitle {
     margin-bottom: 50px;
   }
-}
-header .logo-title {
-  font-weight: 700;
-  font-family: "Josefin Sans", sans-serif;
-  text-transform: uppercase;
-  color: #FFFFFF;
 }
 
 /*********************** font families ***********/
@@ -304,7 +306,7 @@ header .logo-title {
 .why {
   height: 71vh;
   padding-top: 132px;
-  background-image: url("../../../images/WhyBackground.jpg");
+  background-image: url("../images/WhyBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   /*********************** styles for phones *****************/
@@ -576,7 +578,7 @@ header .logo-title {
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .steps {
     padding: 60px 0;
-    background-image: url("../../../images/Line.svg");
+    background-image: url("../images/Line.svg");
     background-position-x: 50%;
     background-repeat: no-repeat;
     background-size: 57%;
@@ -595,7 +597,7 @@ header .logo-title {
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
   .steps {
     /******* for first 300  px XDDDDDDDDDDDDD xz kak make this better =( *************/
-    background-image: url("../../../images/Line.svg");
+    background-image: url("../images/Line.svg");
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-size: 52%;
@@ -624,7 +626,7 @@ header .logo-title {
   .steps {
     background-position-x: 50%;
     padding: 57px 0;
-    background-image: url("../../../images/Line.svg");
+    background-image: url("../images/Line.svg");
     background-repeat: no-repeat;
     background-size: 50%;
     text-align: center;
@@ -679,7 +681,7 @@ header .logo-title {
 
 /***************** global styles ******************/
 .book-now, .mountain {
-  background-image: url("../../../images/mansion.jpg");
+  background-image: url("../images/mansion.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -827,7 +829,7 @@ header .logo-title {
 }
 
 .mountain {
-  background-image: url("../../../images/spain-1859434_1280 1.jpg");
+  background-image: url("../images/spain-1859434_1280 1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 72.5vh;
@@ -896,7 +898,7 @@ header .logo-title {
 }
 
 .comments {
-  background-image: url("../../../images/comments_bg.jpg");
+  background-image: url("../images/comments_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -931,7 +933,7 @@ header .logo-title {
   font-weight: 300;
 }
 .comments .text:before {
-  content: url("../../../images/quote-left.svg");
+  content: url("../images/quote-left.svg");
   height: 20px;
   width: 20px;
   margin-right: 6px;
@@ -1034,6 +1036,64 @@ header .logo-title {
   }
   .comments .content-inside {
     padding: 48px 60px;
+  }
+}
+
+/*********************** font families ***********/
+/*********************** weights ****************/
+/********************** sizes **************/
+.container {
+  min-width: 375px;
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 100%;
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .container {
+    padding: 0 134px;
+  }
+}
+
+footer {
+  background: #000000;
+  padding: 85px 0 80px 0;
+  text-align: center;
+}
+footer .logo-title {
+  letter-spacing: 0.1em;
+  font-size: 24px;
+}
+footer .logo_subtitle {
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+footer .socials {
+  display: flex;
+  width: 275px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+@media screen and (min-width: 375px) and (max-width: 1023px) {
+  footer {
+    padding: 60px 0;
   }
 }
 
