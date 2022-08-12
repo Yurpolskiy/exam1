@@ -5,23 +5,29 @@
 @import '../../details/container';
 
 .main-header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 8vh;
   background: colors.$button-background;
+
   ul {
-    display:flex;
+    display: flex;
   }
+
   .logo-title__main {
     font-size: fonts.$navbar-logo_size;
   }
+
   span {
     padding-top: 3px;
   }
+
   svg {
     padding-top: 2px;
   }
+
   a {
     text-transform: uppercase;
     font-family: fonts.$secondary-family;
@@ -31,15 +37,30 @@
     color: colors.$default-white;
     font-size: fonts.$navbar_hrefs-size;
   }
+
   ul {
     gap: 25px;
   }
+
   .logo-title__main {
     text-transform: uppercase;
     color: colors.$default-white;
     font-family: fonts.$primary-family;
     font-weight: fonts.$logo-weight;
   }
+
+  .hamburger {
+    li{
+      text-transform: uppercase;
+      font-family: fonts.$secondary-family;
+      font-weight: fonts.$paragraph-weight;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      color: colors.$default-white;
+      font-size: fonts.$navbar_hrefs-size;
+    }
+  }
+
   @include mixins.media_accurate(displays.$xs, displays.$lt - 1px) {
     padding: 0 34px;
     nav {
@@ -50,11 +71,11 @@
     padding: 0 50px;
   }
   @include mixins.media(displays.$lt) {
-    svg {
+    .hamburger {
       display: none;
     }
   }
-  @include mixins.media_accurate(displays.$sm, displays.$lt - 1px){
+  @include mixins.media_accurate(displays.$sm, displays.$lt - 1px) {
     padding: 0 34px;
   }
   @include mixins.media(displays.$largest) {

@@ -7,6 +7,9 @@
 
 
 /******************** global styles *****************/
+button {
+  cursor: pointer;
+}
 header {
   .logo_subtitle {
     margin-bottom: 50px;
@@ -44,6 +47,11 @@ header {
       font-weight: fonts.$paragraph-weight;
       letter-spacing: 0.1em;
       color: colors.$default-white;
+    }
+    button:hover, button:focus {
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
     button:after {
       content: url("../../images/search.svg");
@@ -87,5 +95,72 @@ header {
       left: 6%;
       content: url("../../images/search.svg");
     }
+    }
+  }
+
+  button {
+    transition: 0.5s all;
+  }
+  button:hover, button:focus {
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    .content {
+      padding-bottom: 20px;
+    }
+  }
+
+  /*********** SOCIALS ***********/
+  .socials {
+    button {
+      transition: 0.5s all;
+      background: transparent;
+      border: none;
+      .social-icon__hover {
+        display: none;
+      }
+    }
+    button:hover {
+      .social-icon__hover {
+        display: inline-block;
+      }
+      .social-icon {
+        display: none;
+      }
+    }
+  }
+
+  /************ hamburger *************/
+  .hamburger {
+    cursor: pointer;
+    transition: 0.5s all;
+    border: none;
+    background: transparent;
+  }
+  .hamburger:hover, .hamburger:focus {
+    svg {
+      transition: 0.5s all;
+      display: none;
+    }
+    nav {
+      display: inline-block;
+    }
+  }
+  /************** ya xz kak tut transition sdelat ****************/
+  @include mixins.media_accurate(displays.$xs, displays.$sm - 1px) {
+    .hamburger:hover, .hamburger:focus {
+      transition: 0.5s all;
+      background: colors.$button-background;
+      ul {
+        transition: 0.5s all;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        position: absolute;
+        right: 0;
+        top: 56px;
+        background: colors.$button-background;
+      }
     }
   }

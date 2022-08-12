@@ -35,6 +35,10 @@
 /*********************** weights ****************/
 /********************** sizes **************/
 /******************** global styles *****************/
+button {
+  cursor: pointer;
+}
+
 header .logo_subtitle {
   margin-bottom: 50px;
 }
@@ -72,6 +76,9 @@ header form button {
   font-weight: 400;
   letter-spacing: 0.1em;
   color: #FFFFFF;
+}
+header form button:hover, header form button:focus {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 header form button:after {
   content: url("../images/search.svg");
@@ -116,6 +123,67 @@ header form button:after {
   }
 }
 
+button {
+  transition: 0.5s all;
+}
+
+button:hover, button:focus {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+button:hover .content, button:focus .content {
+  padding-bottom: 20px;
+}
+
+/*********** SOCIALS ***********/
+.socials button {
+  transition: 0.5s all;
+  background: transparent;
+  border: none;
+}
+.socials button .social-icon__hover {
+  display: none;
+}
+.socials button:hover .social-icon__hover {
+  display: inline-block;
+}
+.socials button:hover .social-icon {
+  display: none;
+}
+
+/************ hamburger *************/
+.hamburger {
+  cursor: pointer;
+  transition: 0.5s all;
+  border: none;
+  background: transparent;
+}
+
+.hamburger:hover svg, .hamburger:focus svg {
+  transition: 0.5s all;
+  display: none;
+}
+.hamburger:hover nav, .hamburger:focus nav {
+  display: inline-block;
+}
+
+/************** ya xz kak tut transition sdelat ****************/
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .hamburger:hover, .hamburger:focus {
+    transition: 0.5s all;
+    background: #5373FD;
+  }
+  .hamburger:hover ul, .hamburger:focus ul {
+    transition: 0.5s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    position: absolute;
+    right: 0;
+    top: 56px;
+    background: #5373FD;
+  }
+}
 /************************* global ***************/
 .logo-title {
   font-weight: 700;
@@ -197,6 +265,7 @@ header h1 {
 }
 
 .main-header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -233,6 +302,15 @@ header h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700;
 }
+.main-header .hamburger li {
+  text-transform: uppercase;
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 14px;
+}
 @media screen and (min-width: 375px) and (max-width: 1023px) {
   .main-header {
     padding: 0 34px;
@@ -247,7 +325,7 @@ header h1 {
   }
 }
 @media screen and (min-width: 1024px) {
-  .main-header svg {
+  .main-header .hamburger {
     display: none;
   }
 }
