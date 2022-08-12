@@ -5,6 +5,7 @@
   min-width: 375px;
   max-width: 1320px;
   margin: 0 auto;
+  height: 100%;
 }
 @media screen and (min-width: 1920px) {
   .container {
@@ -73,7 +74,7 @@ header form button {
   color: #FFFFFF;
 }
 header form button:after {
-  content: url("../images/search.svg");
+  content: url("../../images/search.svg");
   position: absolute;
   left: 6%;
 }
@@ -111,7 +112,7 @@ header form button:after {
     height: 10px;
     position: absolute;
     left: 6%;
-    content: url("../images/search.svg");
+    content: url("../../images/search.svg");
   }
 }
 
@@ -120,53 +121,46 @@ header {
   box-sizing: border-box;
   background-position-x: center;
   background-size: cover;
-  background-image: url("../images/HeaderBackground.jpg");
+  background-image: url("../../images/HeaderBackground.jpg");
   background-repeat: no-repeat;
   height: 92.5vh;
+  /**************** 1920 + *************/
 }
 header .logo {
-  padding-top: 31vh;
-}
-
-.logo {
+  padding-top: 32vh;
   margin-left: 10px;
   text-align: center;
 }
-
-h1 {
+header h1 {
   margin-bottom: 5px;
   font-size: 48px;
 }
-
-.logo_subtitle {
+header .logo_subtitle {
   font-size: 22px;
   font-weight: 400;
   color: #FFFFFF;
   line-height: 28px;
   letter-spacing: 0.35em;
 }
-
-/**************** 1920 + *************/
 @media screen and (min-width: 1920px) {
-  form {
+  header form {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     height: 60px;
     justify-content: space-between;
   }
-  .logo_subtitle {
-    margin-bottom: 78px;
+  header .logo_subtitle {
+    margin-bottom: 50px;
   }
 }
-.logo-title {
+header .logo-title {
   font-weight: 700;
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
-/*************** breakpoints*************/
 /*********************** font families ***********/
 /*********************** weights ****************/
 /********************** sizes **************/
@@ -174,6 +168,7 @@ h1 {
   min-width: 375px;
   max-width: 1320px;
   margin: 0 auto;
+  height: 100%;
 }
 @media screen and (min-width: 1920px) {
   .container {
@@ -230,6 +225,12 @@ h1 {
 .main-header ul {
   gap: 25px;
 }
+.main-header .logo-title__main {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+}
 @media screen and (min-width: 375px) and (max-width: 1023px) {
   .main-header {
     padding: 0 34px;
@@ -274,6 +275,7 @@ h1 {
   min-width: 375px;
   max-width: 1320px;
   margin: 0 auto;
+  height: 100%;
 }
 @media screen and (min-width: 1920px) {
   .container {
@@ -302,7 +304,7 @@ h1 {
 .why {
   height: 71vh;
   padding-top: 132px;
-  background-image: url("../images/WhyBackground.jpg");
+  background-image: url("../../../images/WhyBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   /*********************** styles for phones *****************/
@@ -501,6 +503,7 @@ h1 {
   min-width: 375px;
   max-width: 1320px;
   margin: 0 auto;
+  height: 100%;
 }
 @media screen and (min-width: 1920px) {
   .container {
@@ -573,7 +576,7 @@ h1 {
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .steps {
     padding: 60px 0;
-    background-image: url("../images/Line.svg");
+    background-image: url("../../../images/Line.svg");
     background-position-x: 50%;
     background-repeat: no-repeat;
     background-size: 57%;
@@ -592,7 +595,7 @@ h1 {
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
   .steps {
     /******* for first 300  px XDDDDDDDDDDDDD xz kak make this better =( *************/
-    background-image: url("../images/Line.svg");
+    background-image: url("../../../images/Line.svg");
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-size: 52%;
@@ -621,7 +624,7 @@ h1 {
   .steps {
     background-position-x: 50%;
     padding: 57px 0;
-    background-image: url("../images/Line.svg");
+    background-image: url("../../../images/Line.svg");
     background-repeat: no-repeat;
     background-size: 50%;
     text-align: center;
@@ -648,6 +651,7 @@ h1 {
   min-width: 375px;
   max-width: 1320px;
   margin: 0 auto;
+  height: 100%;
 }
 @media screen and (min-width: 1920px) {
   .container {
@@ -674,8 +678,8 @@ h1 {
 }
 
 /***************** global styles ******************/
-.book-now {
-  background-image: url("../images/mansion.jpg");
+.book-now, .mountain {
+  background-image: url("../../../images/mansion.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -686,7 +690,7 @@ h1 {
   /******************* for laptop & 1440 + px *****************/
   /****************** for 1920 px ***************/
 }
-.book-now span {
+.book-now span, .mountain span {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 0.1em;
@@ -695,7 +699,7 @@ h1 {
   display: inline-block;
   color: #FFFFFF;
 }
-.book-now h3 {
+.book-now h3, .mountain h3 {
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
@@ -704,7 +708,7 @@ h1 {
   color: #FFFFFF;
   padding: 16px 0;
 }
-.book-now p {
+.book-now p, .mountain p {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
@@ -712,12 +716,12 @@ h1 {
   letter-spacing: 0.1em;
   color: #FFFFFF;
 }
-.book-now .content {
+.book-now .content, .mountain .content {
   top: 23vh;
   position: absolute;
   background: #232323;
 }
-.book-now .booknow {
+.book-now .booknow, .mountain .booknow {
   background: #5373FD;
   font-family: "Aleo", serif;
   font-size: 16px;
@@ -729,59 +733,307 @@ h1 {
   border: none;
 }
 @media screen and (min-width: 375px) and (max-width: 767px) {
-  .book-now {
+  .book-now, .mountain {
     background-position: center;
     display: flex;
     justify-content: center;
   }
-  .book-now .content {
+  .book-now .content, .mountain .content {
     top: 18vh;
     width: 250px;
     margin: 0 auto;
     padding: 15px 25px;
   }
-  .book-now .booknow {
+  .book-now .booknow, .mountain .booknow {
     margin-top: 15px;
     height: 40px;
     width: 100%;
   }
+  .book-now .flex-container, .mountain .flex-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .book-now {
+  .book-now, .mountain {
     background-position: center;
   }
-  .book-now .content {
+  .book-now .content, .mountain .content {
     width: 500px;
     padding: 20px 15px;
   }
-  .book-now .booknow {
+  .book-now .booknow, .mountain .booknow {
     margin-top: 15px;
     height: 40px;
     width: 150px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1919px) {
-  .book-now .content {
+  .book-now .content, .mountain .content {
     padding: 30px 25px;
     width: 650px;
   }
-  .book-now .booknow {
+  .book-now .booknow, .mountain .booknow {
     margin-top: 20px;
     height: 50px;
     width: 195px;
   }
 }
 @media screen and (min-width: 1920px) {
-  .book-now .content {
+  .book-now .content, .mountain .content {
     box-sizing: border-box;
     padding: 44px 32px;
     width: 650px;
     background: #232323;
   }
-  .book-now button {
+  .book-now button, .mountain button {
     height: 60px;
     width: 213px;
     margin-top: 24px;
+  }
+}
+
+/*********************** font families ***********/
+/*********************** weights ****************/
+/********************** sizes **************/
+.container {
+  min-width: 375px;
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 100%;
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .container {
+    padding: 0 134px;
+  }
+}
+
+.mountain {
+  background-image: url("../../../images/spain-1859434_1280 1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 72.5vh;
+  background-position: left;
+  /*************** for phones *************/
+  /****************** for 1440+px *********/
+}
+.mountain .content {
+  right: 0;
+  position: absolute;
+}
+.mountain .flex-container {
+  position: relative;
+  display: flex;
+  justify-content: right;
+  height: 100%;
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .mountain .content {
+    position: relative;
+    height: 60.5%;
+    margin: 0;
+  }
+  .mountain .flex-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .mountain .content {
+    width: 635px;
+  }
+}
+
+/*********************** font families ***********/
+/*********************** weights ****************/
+/********************** sizes **************/
+.container {
+  min-width: 375px;
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 100%;
+}
+@media screen and (min-width: 1920px) {
+  .container {
+    padding: 0 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .container {
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1919px) {
+  .container {
+    padding: 0 134px;
+  }
+}
+
+.comments {
+  background-image: url("../../../images/comments_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: left;
+  padding-top: 120px;
+  padding-bottom: 180px;
+  /********************** for phones ****************/
+  /************* for 300px XDDD ************/
+  /********************** for tablets **************/
+  /********************** for laptops ************/
+  /************** for 1920 + px **********/
+}
+.comments h2 {
+  color: #FFFFFF;
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+.comments p {
+  color: #FFFFFF;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 28px;
+}
+.comments .subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.comments .text {
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+.comments .text:before {
+  content: url("../../../images/quote-left.svg");
+  height: 20px;
+  width: 20px;
+  margin-right: 6px;
+}
+.comments .content {
+  display: flex;
+  text-align: left;
+  background: #333333;
+  opacity: 0.9;
+}
+@media screen and (min-width: 375px) and (max-width: 521px) {
+  .comments h2 {
+    font-size: 31px;
+    margin-bottom: 30px;
+  }
+  .comments img {
+    display: none;
+  }
+  .comments .content {
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .comments .content-inside {
+    width: 300px;
+    text-align: center;
+    line-height: 40px;
+  }
+  .comments .subtitle {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (min-width: 522px) and (max-width: 767px) {
+  .comments .content {
+    justify-content: left;
+  }
+  .comments img {
+    display: none;
+  }
+  .comments .content-inside {
+    line-height: 50px;
+    padding: 23px 20px;
+  }
+  .comments .subtitle {
+    margin-bottom: 15px;
+  }
+  .comments h2 {
+    font-size: 31px;
+    margin-bottom: 30px;
+  }
+  .comments .content {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .comments {
+    height: 40vh;
+  }
+  .comments h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  .comments img {
+    width: 300px;
+    height: 250px;
+  }
+  .comments .content {
+    align-items: center;
+    padding: 30px 25px;
+  }
+  .comments .content-inside {
+    padding-left: 30px;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .comments img {
+    justify-self: center;
+    align-self: center;
+    width: 350px;
+    height: 250px;
+  }
+  .comments h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  .comments .content {
+    padding: 30px;
+  }
+  .comments .content-inside {
+    padding: 25px 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .comments h2 {
+    font-size: 36px;
+    padding-bottom: 60px;
+  }
+  .comments .subtitle {
+    padding-bottom: 15px;
+  }
+  .comments .content-inside {
+    padding: 48px 60px;
   }
 }
 

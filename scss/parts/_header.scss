@@ -13,48 +13,45 @@ header {
   background-image: url("../../images/HeaderBackground.jpg");
   background-repeat: no-repeat;
   height: 92.5vh;
+
   .logo {
-    padding-top: 31vh;
+    padding-top: 32vh;
+    margin-left: 10px;
+    text-align: center;
   }
-}
-.logo {
-  margin-left: 10px;
-  text-align: center;
-}
 
-h1 {
-  margin-bottom: 5px;
-  font-size: fonts.$logo-title_size;
-}
-
-.logo_subtitle {
-  font-size: fonts.$logo-subtitle_size;
-  font-weight: fonts.$paragraph-weight;
-  color: colors.$default-white;
-  line-height: 28px;
-  letter-spacing: 0.35em;
-}
-
-/**************** 1920 + *************/
-@include mixins.media (displays.$largest) {
-  form {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    height: 60px;
-    justify-content: space-between;
+  h1 {
+    margin-bottom: 5px;
+    font-size: fonts.$logo-title_size;
   }
+
   .logo_subtitle {
-    margin-bottom: 78px;
+    font-size: fonts.$logo-subtitle_size;
+    font-weight: fonts.$paragraph-weight;
+    color: colors.$default-white;
+    line-height: 28px;
+    letter-spacing: 0.35em;
+  }
+
+  /**************** 1920 + *************/
+  @include mixins.media(displays.$largest) {
+    form {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      height: 60px;
+      justify-content: space-between;
+    }
+    .logo_subtitle {
+      margin-bottom: 50px;
+    }
+  }
+
+  .logo-title {
+    font-weight: fonts.$logo-weight;
+    font-family: fonts.$primary-family;
+    text-transform: uppercase;
+    color: colors.$default-white;
   }
 }
 
-.logo-title {
-  font-weight: fonts.$logo-weight;
-  font-family: fonts.$primary-family;
-  text-transform: uppercase;
-  color: colors.$default-white;
-}
-
-
-/*************** breakpoints*************/

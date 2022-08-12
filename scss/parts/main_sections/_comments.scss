@@ -1,0 +1,145 @@
+@use '../../vars/mixins';
+@use '../../vars/colors';
+@use '../../vars/fonts';
+@use '../../vars/displays';
+@import '../../details/container';
+
+.comments {
+  background-image: url("../../../images/comments_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-position: left;
+  padding-top: 120px;
+  padding-bottom: 180px;
+  h2 {
+    color: colors.$default-white;
+    font-family: fonts.$secondary-family;
+    font-weight: fonts.$paragraph-weight;
+    line-height: 40px;
+    text-transform: capitalize;
+  }
+  p {
+    color: colors.$default-white;
+    font-family: fonts.$primary-family;
+    line-height: 28px;
+  }
+  .subtitle {
+    font-weight: fonts.$paragraph-weight;
+    font-size: fonts.$content-title;
+    text-transform: uppercase;
+  }
+  .text {
+    letter-spacing: 0.1em;
+    font-weight: fonts.$paragraph-weight_secondary;
+  }
+  .text:before {
+    content: url("../../../images/quote-left.svg");
+    height: 20px;
+    width: 20px;
+    margin-right: 6px;
+  }
+  .content {
+    display: flex;
+    text-align: left;
+    background: colors.$comments_content-background;
+    opacity: 0.9;
+  }
+  /********************** for phones ****************/
+  @include mixins.media_accurate(displays.$xs, 521px) {
+    h2 {
+      font-size: fonts.$h2-size - 5px;
+      margin-bottom: 30px;
+    }
+    img {
+      display: none;
+    }
+    .content{
+      justify-content: center;
+      padding: 20px 0;
+    }
+    .content-inside {
+      width: 300px;
+      text-align: center;
+      line-height: 40px;
+    }
+    .subtitle {
+      margin-bottom: 25px;
+    }
+  }
+  /************* for 300px XDDD ************/
+  @include mixins.media_accurate(522px, 767px) {
+    .content {
+      justify-content: left;
+    }
+    img {
+      display: none;
+    }
+    .content-inside {
+      line-height: 50px;
+      padding: 23px 20px;
+    }
+    .subtitle {
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: fonts.$h2-size - 5px;
+      margin-bottom: 30px;
+    }
+    .content {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+  }
+  /********************** for tablets **************/
+   @include mixins.media_accurate(displays.$sm, displays.$lt - 1px) {
+     height: 40vh;
+     h2 {
+       font-size: fonts.$h2-size - 6px;
+       margin-bottom: 40px;
+     }
+     img {
+       width: 300px;
+       height: 250px;
+     }
+     .content {
+       align-items: center;
+       padding: 30px 25px;
+     }
+     .content-inside {
+       padding-left: 30px;
+     }
+   }
+  /********************** for laptops ************/
+  @include mixins.media_accurate(displays.$lt, displays.$xl - 1px) {
+    img {
+      justify-self: center;
+      align-self: center;
+      width: 350px;
+      height: 250px;
+    }
+    h2 {
+      font-size: fonts.$h2-size - 4px;
+      margin-bottom: 50px;
+    }
+    .content {
+      padding: 30px;
+    }
+    .content-inside {
+      padding: 25px 30px;
+    }
+  }
+  /************** for 1920 + px **********/
+  @include mixins.media(displays.$xl) {
+    h2 {
+      font-size: fonts.$h2-size;
+      padding-bottom: 60px;
+    }
+    .subtitle {
+      padding-bottom: 15px;
+    }
+    .content-inside {
+      padding: 48px 60px;
+    }
+  }
+}

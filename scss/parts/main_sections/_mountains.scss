@@ -1,0 +1,42 @@
+@use '../../vars/mixins';
+@use '../../vars/colors';
+@use '../../vars/fonts';
+@use '../../vars/displays';
+@import '../../details/container';
+
+
+.mountain {
+  background-image: url("../../../images/spain-1859434_1280 1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 72.5vh;
+  background-position: left;
+  .content {
+    right: 0;
+    position: absolute;
+  }
+  .flex-container {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    height: 100%;
+  }
+  /*************** for phones *************/
+  @include mixins.media_accurate(displays.$xs, displays.$sm - 1px) {
+    .content {
+      position: relative;
+      height: 60.5%;
+      margin: 0;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  /****************** for 1440+px *********/
+  @include mixins.media(displays.$xl) {
+    .content {
+      width: 635px;
+    }
+  }
+}

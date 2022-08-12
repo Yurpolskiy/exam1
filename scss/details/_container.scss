@@ -4,6 +4,7 @@
   min-width: 375px;
   max-width: 1320px;
   margin: 0 auto;
+  height: 100%;
   @include mixins.media(displays.$largest) {
     padding: 0 300px;
     margin: 0 auto;

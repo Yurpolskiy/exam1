@@ -5,7 +5,7 @@
 @import '../../details/container';
 
 /***************** global styles ******************/
-.book-now {
+.book-now, .mountain {
   background-image: url("../../../images/mansion.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -74,6 +74,10 @@
       margin-top: 15px;
       height: 40px;
       width: 100%;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: center;
     }
   }
   /******************** for tablet *****************/

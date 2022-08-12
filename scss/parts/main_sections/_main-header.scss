@@ -34,6 +34,12 @@
   ul {
     gap: 25px;
   }
+  .logo-title__main {
+    text-transform: uppercase;
+    color: colors.$default-white;
+    font-family: fonts.$primary-family;
+    font-weight: fonts.$logo-weight;
+  }
   @include mixins.media_accurate(displays.$xs, displays.$lt - 1px) {
     padding: 0 34px;
     nav {
