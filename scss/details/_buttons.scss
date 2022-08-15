@@ -54,7 +54,7 @@ header {
       rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
     }
     button:after {
-      content: url("../../images/search.svg");
+      content: url("../images/search.svg");
       position: absolute;
       left: 6%;
     }
@@ -93,7 +93,7 @@ header {
       height: 10px;
       position: absolute;
       left: 6%;
-      content: url("../../images/search.svg");
+      content: url("../images/search.svg");
     }
     }
   }
@@ -130,37 +130,3 @@ header {
     }
   }
 
-  /************ hamburger *************/
-  .hamburger {
-    cursor: pointer;
-    transition: 0.5s all;
-    border: none;
-    background: transparent;
-  }
-  .hamburger:hover, .hamburger:focus {
-    svg {
-      transition: 0.5s all;
-      display: none;
-    }
-    nav {
-      display: inline-block;
-    }
-  }
-  /************** ya xz kak tut transition sdelat ****************/
-  @include mixins.media_accurate(displays.$xs, displays.$sm - 1px) {
-    .hamburger:hover, .hamburger:focus {
-      transition: 0.5s all;
-      background: colors.$button-background;
-      ul {
-        transition: 0.5s all;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-        position: absolute;
-        right: 0;
-        top: 56px;
-        background: colors.$button-background;
-      }
-    }
-  }

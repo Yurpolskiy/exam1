@@ -3,6 +3,7 @@
 @use '../../vars/fonts';
 @use '../../vars/displays';
 @import '../../details/container';
+@import '../../details/hamburger';
 
 .main-header {
   position: relative;
@@ -50,6 +51,8 @@
   }
 
   .hamburger {
+    display: flex;
+    align-items: center;
     li{
       text-transform: uppercase;
       font-family: fonts.$secondary-family;
@@ -61,12 +64,6 @@
     }
   }
 
-  @include mixins.media_accurate(displays.$xs, displays.$lt - 1px) {
-    padding: 0 34px;
-    nav {
-      display: none;
-    }
-  }
   @include mixins.media_accurate(displays.$lt, displays.$xl) {
     padding: 0 50px;
   }

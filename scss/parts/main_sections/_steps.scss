@@ -44,7 +44,7 @@
   /************************ for tablet    *****************/
   @include mixins.media_accurate(displays.$lt, displays.$xl - 1px) {
     padding: 60px 0;
-    background-image: url("../../../images/Line.svg");
+    background-image: url("../images/Line.svg");
     background-position-x: 50%;
     background-repeat: no-repeat;
     background-size: 57%;
@@ -65,7 +65,7 @@
     @include mixins.media_accurate(1440px, 1720px) {
       background-size: 45%;
     }
-    background-image: url("../../../images/Line.svg");
+    background-image: url("../images/Line.svg");
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-size: 52%;
@@ -85,7 +85,7 @@
   @include mixins.media(displays.$largest) {
     background-position-x: 50%;
     padding: 57px 0;
-    background-image: url("../../../images/Line.svg");
+    background-image: url("../images/Line.svg");
     background-repeat: no-repeat;
     background-size: 50%;
     text-align: center;

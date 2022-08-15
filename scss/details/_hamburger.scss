@@ -1,0 +1,62 @@
+@use '../vars/mixins';
+@use '../vars/colors';
+@use '../vars/fonts';
+@use '../vars/displays';
+
+.hamburger {
+  cursor: pointer;
+  transition: 0.5s all;
+  border: none;
+  background: transparent;
+}
+.hamburger:hover, .hamburger:focus {
+  svg {
+    transition: 0.5s all;
+    opacity: 0;
+  }
+  nav {
+    display: inline-block;
+  }
+}
+@include mixins.media_accurate(displays.$xs, displays.$sm - 1px) {
+  .hamburger:hover, .hamburger:focus {
+    transition: 0.5s all;
+  }
+}
+@include mixins.media_accurate(displays.$xs, displays.$lt - 1px) {
+  .main-header {
+    padding: 0 34px;
+    nav {
+      display: none;
+    }
+    .hamburger {
+      nav {
+        display: inline-block;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        background: colors.$button-background;
+        position: absolute;
+        top: 56px;
+        right: 0;
+        padding: 10px 0;
+        align-items: center;
+        opacity: 0;
+      }
+    }
+    .hamburger:hover {
+      ul {
+        opacity: 1;
+      }
+    }
+  }
+}
+@include mixins.media_accurate(830px, displays.$lt - 1px) {
+  .main-header > .hamburger > nav > ul {
+    transition: .5s all;
+    flex-direction: row;
+    padding: 10px 34px;
+    top: 18px;
+  }
+}
