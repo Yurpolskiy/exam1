@@ -273,6 +273,7 @@ header h1 {
     padding: 10px 0;
     align-items: center;
     opacity: 0;
+    transition: 0.5s opacity;
   }
   .main-header .hamburger:hover ul {
     opacity: 1;
